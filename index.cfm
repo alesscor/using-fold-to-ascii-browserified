@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fold to ASCII</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="fold-to-ascii-bundle.js"></script>
+</head>
+<body>
+<form>
+    <textarea id="original"></textarea>
+    <textarea id="result"></textarea>
+    <button>Generate</button>
+</form>
+
+<script type="text/javascript">
+    // console.log(FoldToAscii.fold("Lorém ïpsum dölór.","?"));
+    $("button").bind("click",function(e){
+        $("#result").val(FoldToAscii.fold($("#original").val(),"?"));
+        e.preventDefault();
+    });
+</script>
+</body>
+</html>
